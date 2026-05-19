@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Event_Test
 {
-    public partial class MID_Test_01 : Form
+    public partial class MDI_Test_01 : Form
     {
-        public MID_Test_01()
+        public MDI_Test_01()
         {
             InitializeComponent();
-        }
-
-        private void MID_Test_01_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
