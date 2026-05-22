@@ -19,13 +19,13 @@ namespace Win_Test01
             //Application.Run(new Form1());
             //Application.Run(new Form2());
             //Application.Run(new Main());
-            //Application.Run(new Dlg_Test());
+            Application.Run(new Dlg_Test());
             //Application.Run(new Valid_Test());
             //Application.Run(new Tab_Test());
             //Application.Run(new Key_Form());
             //Application.Run(new ImageForms());
             //Application.Run(new ListForm5());
-            Application.Run(new ThreadTest_01());
+            //Application.Run(new ThreadTest_01());
         }
     }
 }
