@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MID_Test));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,10 +75,11 @@
             this.TB_Paste = new System.Windows.Forms.ToolStripButton();
             this.TB_Undo = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TSSL_1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TSSL_2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TSSL_3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -93,7 +95,7 @@
             this.도움말ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(977, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(987, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -142,12 +144,14 @@
             this.닫기CToolStripMenuItem.Name = "닫기CToolStripMenuItem";
             this.닫기CToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.닫기CToolStripMenuItem.Text = "닫기(&C)";
+            this.닫기CToolStripMenuItem.Click += new System.EventHandler(this.닫기CToolStripMenuItem_Click);
             // 
             // 모두닫기ToolStripMenuItem
             // 
             this.모두닫기ToolStripMenuItem.Name = "모두닫기ToolStripMenuItem";
             this.모두닫기ToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.모두닫기ToolStripMenuItem.Text = "모두 닫기";
+            this.모두닫기ToolStripMenuItem.Click += new System.EventHandler(this.모두닫기ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -314,7 +318,7 @@
             this.TB_Undo});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(977, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(987, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -338,6 +342,7 @@
             this.TB_Open.Size = new System.Drawing.Size(23, 22);
             this.TB_Open.Text = "toolStripButton2";
             this.TB_Open.ToolTipText = "열기";
+            this.TB_Open.Click += new System.EventHandler(this.TB_Open_Click);
             // 
             // toolStripSeparator1
             // 
@@ -437,41 +442,48 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 577);
+            this.TSSL_1,
+            this.TSSL_2,
+            this.TSSL_3});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 532);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(977, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(987, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // TSSL_1
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(121, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            this.TSSL_1.BackColor = System.Drawing.Color.White;
+            this.TSSL_1.Name = "TSSL_1";
+            this.TSSL_1.Size = new System.Drawing.Size(121, 17);
+            this.TSSL_1.Text = "toolStripStatusLabel1";
             // 
-            // toolStripStatusLabel2
+            // TSSL_2
             // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(121, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
+            this.TSSL_2.BackColor = System.Drawing.Color.White;
+            this.TSSL_2.Name = "TSSL_2";
+            this.TSSL_2.Size = new System.Drawing.Size(121, 17);
+            this.TSSL_2.Text = "toolStripStatusLabel2";
             // 
-            // toolStripStatusLabel3
+            // TSSL_3
             // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(720, 17);
-            this.toolStripStatusLabel3.Spring = true;
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TSSL_3.BackColor = System.Drawing.Color.White;
+            this.TSSL_3.Name = "TSSL_3";
+            this.TSSL_3.Size = new System.Drawing.Size(820, 17);
+            this.TSSL_3.Spring = true;
+            this.TSSL_3.Text = "toolStripStatusLabel3";
+            this.TSSL_3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // MID_Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(977, 599);
+            this.ClientSize = new System.Drawing.Size(987, 554);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -539,9 +551,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
+        private System.Windows.Forms.ToolStripStatusLabel TSSL_1;
+        private System.Windows.Forms.ToolStripStatusLabel TSSL_2;
+        private System.Windows.Forms.ToolStripStatusLabel TSSL_3;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
