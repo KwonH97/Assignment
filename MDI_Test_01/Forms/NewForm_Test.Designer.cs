@@ -1,4 +1,4 @@
-ï»¿namespace MID_Test_01
+namespace MDI_Test_01
 {
     partial class NewForm_Test
     {
@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.Txt_Memo);
             this.Name = "NewForm_Test";
-            this.Text = "ë¬¸ì„œ1";
+            this.Text = "¹®¼­1";
             this.ResumeLayout(false);
             this.PerformLayout();
 

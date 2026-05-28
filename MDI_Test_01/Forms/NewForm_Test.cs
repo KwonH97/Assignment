@@ -1,17 +1,9 @@
-Ôªøusing System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
 
-namespace MID_Test_01
+namespace MDI_Test_01
 {
-    public partial class NewForm_Test : Form
+    public partial class NewForm_Test : System.Windows.Forms.Form
     {
         private ToolStripStatusLabel _statusLabel;
 
@@ -28,21 +20,19 @@ namespace MID_Test_01
             ConnectMemoStatus();
         }
 
-        // ÏÉà Î¨∏ÏÑúÏö©
+        // ªı πÆº≠øÎ
         public NewForm_Test(ToolStripStatusLabel statusLabel)
         {
             InitializeComponent();
-
             _statusLabel = statusLabel;
             ConnectMemoStatus();
         }
-        // ÌååÏùº Ïó¥Í∏∞Ïö©
+
+        // ∆ƒ¿œ ø≠±‚øÎ
         public NewForm_Test(string text, ToolStripStatusLabel statusLabel)
         {
             InitializeComponent();
-
             Txt_Memo.Text = text;
-
             _statusLabel = statusLabel;
             ConnectMemoStatus();
         }
@@ -56,7 +46,7 @@ namespace MID_Test_01
         {
             if (_statusLabel != null)
             {
-                _statusLabel.Text = "ÏûëÏÑ± Ï§ë";
+                _statusLabel.Text = "¿€º∫ ¡ﬂ";
             }
         }
     }

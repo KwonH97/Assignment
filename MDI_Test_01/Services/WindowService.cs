@@ -1,37 +1,29 @@
-Ôªøusing System;
-using System.Collections.Generic;
+using System;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
-namespace MID_Test_01.Services
+namespace MDI_Test_01.Services
 {
     internal class WindowService
     {
-        public void Newform(Form parent, ToolStripStatusLabel txtLabel)
+        public void Newform(Form parent, ToolStripStatusLabel txtLabel, string title)
         {
             NewForm_Test nf = new NewForm_Test(txtLabel);
-            nf.TopLevel = false;
-            nf.Parent = parent;
+            nf.MdiParent = parent;
             nf.BringToFront();
-            nf.StartPosition = FormStartPosition.Manual;
-            nf.Location = new Point(0, 48);
+            nf.Text = title;
             nf.Show();
-            txtLabel.Text = "ÏÉà Î¨∏ÏÑú ÏÉùÏÑ±";
+            txtLabel.Text = "ªı πÆº≠ ª˝º∫";
             
         }
         public void Open(Form parent, ToolStripStatusLabel txtLabel)
         {
             OpenFileDialog open = new OpenFileDialog();
-            txtLabel.Text = "Ïó¨Îäî Ï§ë";
-            open.Filter = "ÌÖçÏä§Ìä∏Î¨∏ÏÑú(*.txt)|*.txt|Î™®Îì† ÌååÏùº(*.*)|*.*";
+            txtLabel.Text = "ø©¥¬ ¡ﬂ";
+            open.Filter = "≈ÿΩ∫∆ÆπÆº≠(*.txt)|*.txt|∏µÁ ∆ƒ¿œ(*.*)|*.*";
             open.FilterIndex = 1;
             open.InitialDirectory = @"C:\";
 
@@ -40,22 +32,43 @@ namespace MID_Test_01.Services
                 string fileName = open.FileName;
                 string text = File.ReadAllText(fileName, Encoding.UTF8); ;
                 NewForm_Test nf = new NewForm_Test(text, txtLabel);
-                nf.TopLevel = false;
-                nf.Parent = parent;
+                nf.MdiParent = parent;
                 nf.BringToFront();
-                nf.StartPosition = FormStartPosition.Manual;
-                nf.Location = new Point(0, 48);
                 nf.Show();
-                txtLabel.Text = "Î∂àÎü¨Ïò§Í∏∞ ÏôÑÎ£å";
+                txtLabel.Text = "∫“∑Øø¿±‚ øœ∑·";
+            }
+            else
+            {
+                txtLabel.Text = "ø≠±‚ √Îº“";
             }
         }
         public void AllClose(Form parent)
         {
-            foreach (Form form in parent.Controls.OfType<Form>().ToList())
+            foreach (Form form in parent.MdiChildren.ToList())
             {
                 form.Close();
             }
         }
+
+        public void Save(Form parent)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+
+            save.Filter = "≈ÿΩ∫∆ÆπÆº≠(*.txt)|*.txt|∏µÁ ∆ƒ¿œ(*.*)|*.*";
+            save.OverwritePrompt = true;
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                string File_Name = save.FileName;
+
+                StreamWriter stw = new StreamWriter(File_Name, false, Encoding.UTF8);
+
+                stw.Write(Txt_Memo.Txt);
+                stw.Flush();
+                stw.Close();
+            }
+        }
+
         public void UpdateTime(ToolStripStatusLabel dateLabel, ToolStripStatusLabel timeLabel)
         {
             DateTime now = DateTime.Now;

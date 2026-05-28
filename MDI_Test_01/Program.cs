@@ -1,22 +1,22 @@
-ï»¿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MID_Test_01
+namespace MDI_Test_01
 {
     internal static class Program
     {
         /// <summary>
-        /// í•´ë‹¹ ì• í”Œë¦¬ì¼€ì´ì…˜ì˜ ì£¼ ì§„ì…ì ì…ë‹ˆë‹¤.
+        /// ÇØ´ç ¾ÖÇÃ¸®ÄÉÀÌ¼ÇÀÇ ÁÖ ÁøÀÔÁ¡ÀÔ´Ï´Ù.
         /// </summary>
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MID_Test());
+            Application.Run(new MDI_Test());
         }
     }
 }

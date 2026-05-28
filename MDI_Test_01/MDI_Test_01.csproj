@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{C9785C9C-AE70-418A-9D07-EA0E539C7D43}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MID_Test_01</RootNamespace>
-    <AssemblyName>MID_Test_01</AssemblyName>
+    <RootNamespace>MDI_Test_01</RootNamespace>
+    <AssemblyName>MDI_Test_01</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\MID_Test.cs">
+    <Compile Include="Forms\MDI_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\MID_Test.Designer.cs">
-      <DependentUpon>MID_Test.cs</DependentUpon>
+    <Compile Include="Forms\MDI_Test.Designer.cs">
+      <DependentUpon>MDI_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\NewForm_Test.cs">
       <SubType>Form</SubType>
@@ -63,8 +63,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\WindowService.cs" />
-    <EmbeddedResource Include="Forms\MID_Test.resx">
-      <DependentUpon>MID_Test.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MDI_Test.resx">
+      <DependentUpon>MDI_Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NewForm_Test.resx">
       <DependentUpon>NewForm_Test.cs</DependentUpon>

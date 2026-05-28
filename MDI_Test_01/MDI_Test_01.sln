@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37314.3 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MID_Test_01", "MID_Test_01.csproj", "{C9785C9C-AE70-418A-9D07-EA0E539C7D43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDI_Test_01", "MDI_Test_01.csproj", "{C9785C9C-AE70-418A-9D07-EA0E539C7D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
