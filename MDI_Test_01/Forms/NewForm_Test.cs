@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace MDI_Test_01
 {
@@ -48,6 +49,49 @@ namespace MDI_Test_01
             {
                 _statusLabel.Text = "작성 중";
             }
+        }
+
+        public string MemoText
+        {
+            get { return Txt_Memo.Text; }
+        }
+
+        public string FilePath { get; set; }
+
+        public void UndoMemo()
+        {
+            Txt_Memo.Undo();
+            _statusLabel.Text = "되돌리기";
+        }
+
+        public void CutMemo()
+        {
+            Txt_Memo.Cut();
+            _statusLabel.Text = "자르기 완료";
+        }
+
+        public void CopyMemo()
+        {
+            Txt_Memo.Copy();
+            _statusLabel.Text = "복사 완료";
+        }
+        
+        public void PasteMemo()
+        {
+            Txt_Memo.Paste();
+            _statusLabel.Text = "붙여놓기 완료";
+        }
+
+        public void ChangeFont(Font font)
+        {
+            Txt_Memo.Font = font;
+            _statusLabel.Text = "글꼴 바꾸기 완료";
+        }
+        
+        public void ChangeBackColor(Color color)
+        {
+            Txt_Memo.BackColor = color;
+            _statusLabel.Text = "배경 바꾸기 완료";
         }
     }
 }
