@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.IO;
@@ -6,13 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace MDI_Test_01.Services
 {
     internal class WindowService
     {
+        private readonly PrintDocument printDocument = new PrintDocument();
+        private string printText = "";
+        private Thread timeThread;
+        private bool isRunning;
+
+        public WindowService()
+        {
+            printDocument.PrintPage += PrintDocument_PrintPage;
+        }
+
         public void Newform(Form parent, ToolStripStatusLabel txtLabel, string title)
         {
             NewForm_Test nf = new NewForm_Test(txtLabel);
@@ -21,8 +29,8 @@ namespace MDI_Test_01.Services
             nf.Text = title;
             nf.Show();
             txtLabel.Text = "새 문서 생성";
-            
         }
+
         public void Open(Form parent, ToolStripStatusLabel txtLabel)
         {
             OpenFileDialog open = new OpenFileDialog();
@@ -31,10 +39,11 @@ namespace MDI_Test_01.Services
             open.FilterIndex = 1;
             open.InitialDirectory = @"C:\";
 
-            if (open.ShowDialog() == DialogResult.OK) 
+            if (open.ShowDialog() == DialogResult.OK)
             {
                 string fileName = open.FileName;
                 string text = File.ReadAllText(fileName, Encoding.UTF8);
+
                 NewForm_Test nf = new NewForm_Test(text, txtLabel);
                 nf.FilePath = fileName;
                 nf.MdiParent = parent;
@@ -47,18 +56,20 @@ namespace MDI_Test_01.Services
                 txtLabel.Text = "열기 취소";
             }
         }
+
         public void AllClose(Form parent, ToolStripStatusLabel txtLabel)
         {
             foreach (Form form in parent.MdiChildren.ToList())
             {
                 form.Close();
             }
+
             txtLabel.Text = "모두 닫기";
         }
+
         public void Save(Form parent, ToolStripStatusLabel txtLabel)
         {
             NewForm_Test child = parent.ActiveMdiChild as NewForm_Test;
-            txtLabel.Text = "저장 완료";
 
             if (child == null)
             {
@@ -73,12 +84,14 @@ namespace MDI_Test_01.Services
             }
 
             File.WriteAllText(child.FilePath, child.MemoText, Encoding.UTF8);
-
+            txtLabel.Text = "저장 완료";
         }
+
         public void SaveAs(Form parent, ToolStripStatusLabel txtLabel)
         {
             NewForm_Test child = parent.ActiveMdiChild as NewForm_Test;
             txtLabel.Text = "다른 이름으로 저장 중";
+
             if (child == null)
             {
                 MessageBox.Show("저장할 문서가 없습니다.");
@@ -86,41 +99,36 @@ namespace MDI_Test_01.Services
             }
 
             SaveFileDialog save = new SaveFileDialog();
-
             save.Filter = "텍스트문서(*.txt)|*.txt|모든 파일(*.*)|*.*";
             save.OverwritePrompt = true;
 
             if (save.ShowDialog() == DialogResult.OK)
             {
-                string File_Name = save.FileName;
-                
-                StreamWriter stw = new StreamWriter(File_Name, false, Encoding.UTF8);
+                string fileName = save.FileName;
 
-                stw.Write(child.MemoText);
-                stw.Flush();
-                stw.Close();
-                child.Text = Path.GetFileName(File_Name);
+                using (StreamWriter stw = new StreamWriter(fileName, false, Encoding.UTF8))
+                {
+                    stw.Write(child.MemoText);
+                }
+
+                child.FilePath = fileName;
+                child.Text = Path.GetFileName(fileName);
+                txtLabel.Text = "저장 완료";
             }
             else
             {
                 txtLabel.Text = "저장 취소";
             }
         }
-        public WindowService()
-        {
-            printDocument.PrintPage += PrintDocument_PrintPage;
-        }
 
-        private PrintDocument printDocument = new PrintDocument();
-        private string printText = "";
         public void PageSetup(Form parent, ToolStripStatusLabel txtLabel)
         {
             PageSetupDialog psd = new PageSetupDialog();
-
             txtLabel.Text = "페이지 설정 중";
 
             psd.Document = printDocument;
             psd.ShowDialog();
+
             txtLabel.Text = "페이지 설정 닫음";
         }
 
@@ -149,7 +157,6 @@ namespace MDI_Test_01.Services
             }
 
             txtLabel.Text = "프린트 출력";
-
             printText = child.MemoText;
 
             PrintDialog printDialog = new PrintDialog();
@@ -177,28 +184,29 @@ namespace MDI_Test_01.Services
             }
 
             txtLabel.Text = "프린트 미리보기";
-
             printText = child.MemoText;
 
             PrintPreviewDialog previewDialog = new PrintPreviewDialog();
             previewDialog.Document = printDocument;
-
             previewDialog.ShowDialog();
 
             txtLabel.Text = "프린트 미리보기 닫기";
         }
 
-        private Thread timeThread;
-        private bool isRunning;
         public void UpdateTime(ToolStripStatusLabel dateLabel, ToolStripStatusLabel timeLabel)
         {
             DateTime now = DateTime.Now;
-            dateLabel.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            timeLabel.Text = DateTime.Now.ToString("HH:mm:ss");
+            dateLabel.Text = now.ToString("yyyy-MM-dd");
+            timeLabel.Text = now.ToString("HH:mm:ss");
         }
 
         public void StartTimeThread(Form parent, ToolStripStatusLabel dateLabel, ToolStripStatusLabel timeLabel)
         {
+            if (timeThread != null && timeThread.IsAlive)
+            {
+                return;
+            }
+
             isRunning = true;
 
             timeThread = new Thread(() =>
@@ -245,13 +253,15 @@ namespace MDI_Test_01.Services
         {
             NewForm_Test nf = parent.ActiveMdiChild as NewForm_Test;
 
-            if(nf == null)
+            if (nf == null)
             {
-                MessageBox.Show("잘라낼 문서가 없습니다.");
+                MessageBox.Show("자를 문서가 없습니다.");
                 return;
             }
+
             nf.CutMemo();
         }
+
         public void CopyText(Form parent)
         {
             NewForm_Test nf = parent.ActiveMdiChild as NewForm_Test;
@@ -277,11 +287,10 @@ namespace MDI_Test_01.Services
 
             nf.PasteMemo();
         }
-        
+
         public void ChangeFont(Form parent, ToolStripStatusLabel txtLabel)
         {
             txtLabel.Text = "폰트 바꾸는 중";
-
             NewForm_Test nf = parent.ActiveMdiChild as NewForm_Test;
 
             if (nf == null)
@@ -291,7 +300,6 @@ namespace MDI_Test_01.Services
             }
 
             FontDialog fontDialog = new FontDialog();
-
             fontDialog.Font = nf.Font;
 
             if (fontDialog.ShowDialog() == DialogResult.OK)
@@ -307,7 +315,6 @@ namespace MDI_Test_01.Services
         public void ChangeBackColor(Form parent, ToolStripStatusLabel txtLabel)
         {
             txtLabel.Text = "배경 바꾸는 중";
-
             NewForm_Test child = parent.ActiveMdiChild as NewForm_Test;
 
             if (child == null)
@@ -317,7 +324,6 @@ namespace MDI_Test_01.Services
             }
 
             ColorDialog colorDialog = new ColorDialog();
-
             colorDialog.Color = child.BackColor;
 
             if (colorDialog.ShowDialog() == DialogResult.OK)

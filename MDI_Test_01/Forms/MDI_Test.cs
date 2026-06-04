@@ -63,11 +63,6 @@ namespace MDI_Test_01
             w_service.AllClose(this, TSSL_3);
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            w_service.StartTimeThread(this, TSSL_1, TSSL_2);
-        }
-
         private void TB_Open_Click(object sender, EventArgs e)
         {
             w_service.Open(this, TSSL_3);
