@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CB_Customer_Type_Name = new System.Windows.Forms.ComboBox();
+            this.CB_Genre = new System.Windows.Forms.ComboBox();
+            this.Btn_Close = new System.Windows.Forms.Button();
+            this.Btn_Search = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RB_Rental_Video = new System.Windows.Forms.RadioButton();
+            this.RB_Customer_Rank = new System.Windows.Forms.RadioButton();
+            this.RB_Video_Rank = new System.Windows.Forms.RadioButton();
+            this.DGV_View = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_View)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.CB_Customer_Type_Name);
+            this.groupBox1.Controls.Add(this.CB_Genre);
+            this.groupBox1.Controls.Add(this.Btn_Close);
+            this.groupBox1.Controls.Add(this.Btn_Search);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.RB_Rental_Video);
+            this.groupBox1.Controls.Add(this.RB_Customer_Rank);
+            this.groupBox1.Controls.Add(this.RB_Video_Rank);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 15F);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -62,47 +62,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "조회 정보";
             // 
-            // radioButton1
+            // CB_Customer_Type_Name
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(17, 38);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(181, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "비디오 대여 순위";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.CB_Customer_Type_Name.FormattingEnabled = true;
+            this.CB_Customer_Type_Name.Location = new System.Drawing.Point(500, 74);
+            this.CB_Customer_Type_Name.Name = "CB_Customer_Type_Name";
+            this.CB_Customer_Type_Name.Size = new System.Drawing.Size(121, 28);
+            this.CB_Customer_Type_Name.TabIndex = 10;
             // 
-            // radioButton2
+            // CB_Genre
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(17, 78);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(161, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "고객 대여 순위";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.CB_Genre.FormattingEnabled = true;
+            this.CB_Genre.Location = new System.Drawing.Point(500, 37);
+            this.CB_Genre.Name = "CB_Genre";
+            this.CB_Genre.Size = new System.Drawing.Size(121, 28);
+            this.CB_Genre.TabIndex = 9;
             // 
-            // radioButton3
+            // Btn_Close
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(208, 38);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(174, 24);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "대여중인 비디오";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Btn_Close.Location = new System.Drawing.Point(737, 37);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(92, 67);
+            this.Btn_Close.TabIndex = 8;
+            this.Btn_Close.Text = "나가기";
+            this.Btn_Close.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // Btn_Search
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(434, 42);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "장르 :";
+            this.Btn_Search.Location = new System.Drawing.Point(639, 37);
+            this.Btn_Search.Name = "Btn_Search";
+            this.Btn_Search.Size = new System.Drawing.Size(92, 67);
+            this.Btn_Search.TabIndex = 7;
+            this.Btn_Search.Text = "검색";
+            this.Btn_Search.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -113,61 +105,69 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "고객 신분 :";
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(639, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 67);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "검색";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(434, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "장르 :";
             // 
-            // button2
+            // RB_Rental_Video
             // 
-            this.button2.Location = new System.Drawing.Point(737, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 67);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "나가기";
-            this.button2.UseVisualStyleBackColor = true;
+            this.RB_Rental_Video.AutoSize = true;
+            this.RB_Rental_Video.Location = new System.Drawing.Point(208, 38);
+            this.RB_Rental_Video.Name = "RB_Rental_Video";
+            this.RB_Rental_Video.Size = new System.Drawing.Size(174, 24);
+            this.RB_Rental_Video.TabIndex = 2;
+            this.RB_Rental_Video.TabStop = true;
+            this.RB_Rental_Video.Text = "대여중인 비디오";
+            this.RB_Rental_Video.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // RB_Customer_Rank
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(500, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 9;
+            this.RB_Customer_Rank.AutoSize = true;
+            this.RB_Customer_Rank.Location = new System.Drawing.Point(17, 78);
+            this.RB_Customer_Rank.Name = "RB_Customer_Rank";
+            this.RB_Customer_Rank.Size = new System.Drawing.Size(161, 24);
+            this.RB_Customer_Rank.TabIndex = 1;
+            this.RB_Customer_Rank.TabStop = true;
+            this.RB_Customer_Rank.Text = "고객 대여 순위";
+            this.RB_Customer_Rank.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // RB_Video_Rank
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(500, 74);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 10;
+            this.RB_Video_Rank.AutoSize = true;
+            this.RB_Video_Rank.Location = new System.Drawing.Point(17, 38);
+            this.RB_Video_Rank.Name = "RB_Video_Rank";
+            this.RB_Video_Rank.Size = new System.Drawing.Size(181, 24);
+            this.RB_Video_Rank.TabIndex = 0;
+            this.RB_Video_Rank.TabStop = true;
+            this.RB_Video_Rank.Text = "비디오 대여 순위";
+            this.RB_Video_Rank.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DGV_View
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(846, 289);
-            this.dataGridView1.TabIndex = 11;
+            this.DGV_View.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_View.Location = new System.Drawing.Point(12, 149);
+            this.DGV_View.Name = "DGV_View";
+            this.DGV_View.RowTemplate.Height = 23;
+            this.DGV_View.Size = new System.Drawing.Size(846, 289);
+            this.DGV_View.TabIndex = 11;
             // 
             // Video_View_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DGV_View);
             this.Controls.Add(this.groupBox1);
             this.Name = "Video_View_Management";
-            this.Text = "Video_View_Management";
+            this.Text = "비디오 조회 관리";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_View)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,15 +175,15 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox CB_Customer_Type_Name;
+        private System.Windows.Forms.ComboBox CB_Genre;
+        private System.Windows.Forms.Button Btn_Close;
+        private System.Windows.Forms.Button Btn_Search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.RadioButton RB_Rental_Video;
+        private System.Windows.Forms.RadioButton RB_Customer_Rank;
+        private System.Windows.Forms.RadioButton RB_Video_Rank;
+        private System.Windows.Forms.DataGridView DGV_View;
     }
 }

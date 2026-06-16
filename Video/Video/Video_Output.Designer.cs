@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CB_Genre = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Btn_Rental_List = new System.Windows.Forms.Button();
+            this.Btn_List = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,19 +46,19 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "비디오 장르 :";
             // 
-            // comboBox1
+            // CB_Genre
             // 
-            this.comboBox1.Font = new System.Drawing.Font("굴림", 15F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(148, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(249, 28);
-            this.comboBox1.TabIndex = 5;
+            this.CB_Genre.Font = new System.Drawing.Font("굴림", 15F);
+            this.CB_Genre.FormattingEnabled = true;
+            this.CB_Genre.Location = new System.Drawing.Point(148, 21);
+            this.CB_Genre.Name = "CB_Genre";
+            this.CB_Genre.Size = new System.Drawing.Size(249, 28);
+            this.CB_Genre.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.Btn_Rental_List);
+            this.groupBox1.Controls.Add(this.Btn_List);
             this.groupBox1.Font = new System.Drawing.Font("굴림", 15F);
             this.groupBox1.Location = new System.Drawing.Point(16, 72);
             this.groupBox1.Name = "groupBox1";
@@ -67,23 +67,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "엑셀로 출력";
             // 
-            // button1
+            // Btn_Rental_List
             // 
-            this.button1.Location = new System.Drawing.Point(36, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 37);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "비디오 목록";
-            this.button1.UseVisualStyleBackColor = true;
+            this.Btn_Rental_List.Location = new System.Drawing.Point(215, 43);
+            this.Btn_Rental_List.Name = "Btn_Rental_List";
+            this.Btn_Rental_List.Size = new System.Drawing.Size(134, 37);
+            this.Btn_Rental_List.TabIndex = 8;
+            this.Btn_Rental_List.Text = "대여 현황";
+            this.Btn_Rental_List.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // Btn_List
             // 
-            this.button2.Location = new System.Drawing.Point(215, 43);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 37);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "대여 현황";
-            this.button2.UseVisualStyleBackColor = true;
+            this.Btn_List.Location = new System.Drawing.Point(36, 43);
+            this.Btn_List.Name = "Btn_List";
+            this.Btn_List.Size = new System.Drawing.Size(134, 37);
+            this.Btn_List.TabIndex = 7;
+            this.Btn_List.Text = "비디오 목록";
+            this.Btn_List.UseVisualStyleBackColor = true;
             // 
             // Video_Output
             // 
@@ -91,7 +91,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 207);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.CB_Genre);
             this.Controls.Add(this.label1);
             this.Name = "Video_Output";
             this.Text = "비디오 출력";
@@ -104,9 +104,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CB_Genre;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btn_Rental_List;
+        private System.Windows.Forms.Button Btn_List;
     }
 }

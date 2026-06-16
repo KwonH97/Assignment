@@ -28,206 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.RB_N_Rental_Policy = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtBox_New_Late_Fee = new System.Windows.Forms.TextBox();
+            this.TxtBox_New_Rental_Fee = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtBox_New_Rental_Days = new System.Windows.Forms.TextBox();
+            this.TxtBox_Conversion_Days = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.RB_O_Rental_Policy = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.TxtBox_Old_Rental_Days = new System.Windows.Forms.TextBox();
+            this.TxtBox_Old_Late_Fee = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtBox_Old_Rental_Fee = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.Btn_Insert = new System.Windows.Forms.Button();
+            this.Btn_Update = new System.Windows.Forms.Button();
+            this.Btn_Close = new System.Windows.Forms.Button();
+            this.RB_N_Rental_Policy.SuspendLayout();
+            this.RB_O_Rental_Policy.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // RB_N_Rental_Policy
             // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("굴림", 15F);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(557, 131);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "신 프로";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Font = new System.Drawing.Font("굴림", 15F);
-            this.groupBox2.Location = new System.Drawing.Point(12, 158);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(557, 131);
-            this.groupBox2.TabIndex = 1;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "구 프로";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("굴림", 15F);
-            this.button1.Location = new System.Drawing.Point(12, 310);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 44);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "등록";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("굴림", 15F);
-            this.button2.Location = new System.Drawing.Point(128, 310);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 44);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "수정";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("굴림", 15F);
-            this.button3.Location = new System.Drawing.Point(445, 310);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 44);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "나가기";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "전환 기간 :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 79);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "대여 기간 :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 20);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "대여 기간 :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(116, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(69, 30);
-            this.textBox1.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(116, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(69, 30);
-            this.textBox2.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(191, 35);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 20);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "일 이내";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(191, 79);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "일";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(290, 35);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 20);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "대여료 :";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(290, 79);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(83, 20);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "연체료 :";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(379, 29);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(119, 30);
-            this.textBox3.TabIndex = 12;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(379, 76);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(119, 30);
-            this.textBox4.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(504, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "원";
+            this.RB_N_Rental_Policy.Controls.Add(this.label9);
+            this.RB_N_Rental_Policy.Controls.Add(this.label8);
+            this.RB_N_Rental_Policy.Controls.Add(this.TxtBox_New_Late_Fee);
+            this.RB_N_Rental_Policy.Controls.Add(this.TxtBox_New_Rental_Fee);
+            this.RB_N_Rental_Policy.Controls.Add(this.label7);
+            this.RB_N_Rental_Policy.Controls.Add(this.label6);
+            this.RB_N_Rental_Policy.Controls.Add(this.label5);
+            this.RB_N_Rental_Policy.Controls.Add(this.label4);
+            this.RB_N_Rental_Policy.Controls.Add(this.TxtBox_New_Rental_Days);
+            this.RB_N_Rental_Policy.Controls.Add(this.TxtBox_Conversion_Days);
+            this.RB_N_Rental_Policy.Controls.Add(this.label2);
+            this.RB_N_Rental_Policy.Controls.Add(this.label1);
+            this.RB_N_Rental_Policy.Font = new System.Drawing.Font("굴림", 15F);
+            this.RB_N_Rental_Policy.Location = new System.Drawing.Point(12, 12);
+            this.RB_N_Rental_Policy.Name = "RB_N_Rental_Policy";
+            this.RB_N_Rental_Policy.Size = new System.Drawing.Size(557, 131);
+            this.RB_N_Rental_Policy.TabIndex = 0;
+            this.RB_N_Rental_Policy.TabStop = false;
+            this.RB_N_Rental_Policy.Text = "신 프로";
             // 
             // label9
             // 
@@ -238,21 +89,115 @@
             this.label9.TabIndex = 15;
             this.label9.Text = "원";
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(191, 59);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "일";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(504, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "원";
             // 
-            // textBox5
+            // TxtBox_New_Late_Fee
             // 
-            this.textBox5.Location = new System.Drawing.Point(116, 56);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(69, 30);
-            this.textBox5.TabIndex = 10;
+            this.TxtBox_New_Late_Fee.Location = new System.Drawing.Point(379, 76);
+            this.TxtBox_New_Late_Fee.Name = "TxtBox_New_Late_Fee";
+            this.TxtBox_New_Late_Fee.Size = new System.Drawing.Size(119, 30);
+            this.TxtBox_New_Late_Fee.TabIndex = 13;
+            // 
+            // TxtBox_New_Rental_Fee
+            // 
+            this.TxtBox_New_Rental_Fee.Location = new System.Drawing.Point(379, 29);
+            this.TxtBox_New_Rental_Fee.Name = "TxtBox_New_Rental_Fee";
+            this.TxtBox_New_Rental_Fee.Size = new System.Drawing.Size(119, 30);
+            this.TxtBox_New_Rental_Fee.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(290, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(83, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "연체료 :";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(290, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 20);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "대여료 :";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(191, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 20);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "일";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(191, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(76, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "일 이내";
+            // 
+            // TxtBox_New_Rental_Days
+            // 
+            this.TxtBox_New_Rental_Days.Location = new System.Drawing.Point(116, 76);
+            this.TxtBox_New_Rental_Days.Name = "TxtBox_New_Rental_Days";
+            this.TxtBox_New_Rental_Days.Size = new System.Drawing.Size(69, 30);
+            this.TxtBox_New_Rental_Days.TabIndex = 7;
+            // 
+            // TxtBox_Conversion_Days
+            // 
+            this.TxtBox_Conversion_Days.Location = new System.Drawing.Point(116, 29);
+            this.TxtBox_Conversion_Days.Name = "TxtBox_Conversion_Days";
+            this.TxtBox_Conversion_Days.Size = new System.Drawing.Size(69, 30);
+            this.TxtBox_Conversion_Days.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 79);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "대여 기간 :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "전환 기간 :";
+            // 
+            // RB_O_Rental_Policy
+            // 
+            this.RB_O_Rental_Policy.Controls.Add(this.label11);
+            this.RB_O_Rental_Policy.Controls.Add(this.label10);
+            this.RB_O_Rental_Policy.Controls.Add(this.label12);
+            this.RB_O_Rental_Policy.Controls.Add(this.TxtBox_Old_Rental_Days);
+            this.RB_O_Rental_Policy.Controls.Add(this.TxtBox_Old_Late_Fee);
+            this.RB_O_Rental_Policy.Controls.Add(this.label3);
+            this.RB_O_Rental_Policy.Controls.Add(this.TxtBox_Old_Rental_Fee);
+            this.RB_O_Rental_Policy.Controls.Add(this.label13);
+            this.RB_O_Rental_Policy.Controls.Add(this.label14);
+            this.RB_O_Rental_Policy.Font = new System.Drawing.Font("굴림", 15F);
+            this.RB_O_Rental_Policy.Location = new System.Drawing.Point(12, 158);
+            this.RB_O_Rental_Policy.Name = "RB_O_Rental_Policy";
+            this.RB_O_Rental_Policy.Size = new System.Drawing.Size(557, 131);
+            this.RB_O_Rental_Policy.TabIndex = 1;
+            this.RB_O_Rental_Policy.TabStop = false;
+            this.RB_O_Rental_Policy.Text = "구 프로";
             // 
             // label11
             // 
@@ -263,6 +208,15 @@
             this.label11.TabIndex = 21;
             this.label11.Text = "원";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(191, 59);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(29, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "일";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -272,19 +226,35 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "원";
             // 
-            // textBox6
+            // TxtBox_Old_Rental_Days
             // 
-            this.textBox6.Location = new System.Drawing.Point(379, 76);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(119, 30);
-            this.textBox6.TabIndex = 19;
+            this.TxtBox_Old_Rental_Days.Location = new System.Drawing.Point(116, 56);
+            this.TxtBox_Old_Rental_Days.Name = "TxtBox_Old_Rental_Days";
+            this.TxtBox_Old_Rental_Days.Size = new System.Drawing.Size(69, 30);
+            this.TxtBox_Old_Rental_Days.TabIndex = 10;
             // 
-            // textBox7
+            // TxtBox_Old_Late_Fee
             // 
-            this.textBox7.Location = new System.Drawing.Point(379, 29);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(119, 30);
-            this.textBox7.TabIndex = 18;
+            this.TxtBox_Old_Late_Fee.Location = new System.Drawing.Point(379, 76);
+            this.TxtBox_Old_Late_Fee.Name = "TxtBox_Old_Late_Fee";
+            this.TxtBox_Old_Late_Fee.Size = new System.Drawing.Size(119, 30);
+            this.TxtBox_Old_Late_Fee.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "대여 기간 :";
+            // 
+            // TxtBox_Old_Rental_Fee
+            // 
+            this.TxtBox_Old_Rental_Fee.Location = new System.Drawing.Point(379, 29);
+            this.TxtBox_Old_Rental_Fee.Name = "TxtBox_Old_Rental_Fee";
+            this.TxtBox_Old_Rental_Fee.Size = new System.Drawing.Size(119, 30);
+            this.TxtBox_Old_Rental_Fee.TabIndex = 18;
             // 
             // label13
             // 
@@ -304,42 +274,72 @@
             this.label14.TabIndex = 16;
             this.label14.Text = "대여료 :";
             // 
+            // Btn_Insert
+            // 
+            this.Btn_Insert.Font = new System.Drawing.Font("굴림", 15F);
+            this.Btn_Insert.Location = new System.Drawing.Point(12, 310);
+            this.Btn_Insert.Name = "Btn_Insert";
+            this.Btn_Insert.Size = new System.Drawing.Size(100, 44);
+            this.Btn_Insert.TabIndex = 2;
+            this.Btn_Insert.Text = "등록";
+            this.Btn_Insert.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Update
+            // 
+            this.Btn_Update.Font = new System.Drawing.Font("굴림", 15F);
+            this.Btn_Update.Location = new System.Drawing.Point(128, 310);
+            this.Btn_Update.Name = "Btn_Update";
+            this.Btn_Update.Size = new System.Drawing.Size(100, 44);
+            this.Btn_Update.TabIndex = 3;
+            this.Btn_Update.Text = "수정";
+            this.Btn_Update.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Close
+            // 
+            this.Btn_Close.Font = new System.Drawing.Font("굴림", 15F);
+            this.Btn_Close.Location = new System.Drawing.Point(445, 310);
+            this.Btn_Close.Name = "Btn_Close";
+            this.Btn_Close.Size = new System.Drawing.Size(100, 44);
+            this.Btn_Close.TabIndex = 4;
+            this.Btn_Close.Text = "나가기";
+            this.Btn_Close.UseVisualStyleBackColor = true;
+            // 
             // Rental_Policy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 366);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Btn_Close);
+            this.Controls.Add(this.Btn_Update);
+            this.Controls.Add(this.Btn_Insert);
+            this.Controls.Add(this.RB_O_Rental_Policy);
+            this.Controls.Add(this.RB_N_Rental_Policy);
             this.Name = "Rental_Policy";
             this.Text = "비디오 대여 설정";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.RB_N_Rental_Policy.ResumeLayout(false);
+            this.RB_N_Rental_Policy.PerformLayout();
+            this.RB_O_Rental_Policy.ResumeLayout(false);
+            this.RB_O_Rental_Policy.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox RB_N_Rental_Policy;
+        private System.Windows.Forms.GroupBox RB_O_Rental_Policy;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Btn_Insert;
+        private System.Windows.Forms.Button Btn_Update;
+        private System.Windows.Forms.Button Btn_Close;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtBox_New_Rental_Days;
+        private System.Windows.Forms.TextBox TxtBox_Conversion_Days;
+        private System.Windows.Forms.TextBox TxtBox_New_Late_Fee;
+        private System.Windows.Forms.TextBox TxtBox_New_Rental_Fee;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
@@ -347,9 +347,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox TxtBox_Old_Rental_Days;
+        private System.Windows.Forms.TextBox TxtBox_Old_Late_Fee;
+        private System.Windows.Forms.TextBox TxtBox_Old_Rental_Fee;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
     }
