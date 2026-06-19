@@ -18,9 +18,10 @@ namespace Video
         public Video_Information()
         {
             InitializeComponent();
+            video_search();
         }
-
-        public void video_search_()
+        // 비디오 조회
+        public void video_search()
         {
             SqlConnection con = new SqlConnection(str);
             try
@@ -32,22 +33,30 @@ namespace Video
 
                 DGV_All_Video.Rows.Clear();
 
+                DGV_All_Video.Columns.Add("col1", "코드");
+                DGV_All_Video.Columns.Add("col2", "장르");
+                DGV_All_Video.Columns.Add("col3", "제목");
+                DGV_All_Video.Columns.Add("col4", "주연 배우");
+                DGV_All_Video.Columns.Add("col5", "감독");
+                DGV_All_Video.Columns.Add("col6", "제작 및 배급");
+                DGV_All_Video.Columns.Add("col7", "출시일");
+
                 while (rd.Read())
                 {
                     DGV_All_Video.Rows.Add(
-                        rd["코드"].ToString(),
-                        rd["장르"].ToString(),
-                        rd["제목"].ToString(),
-                        rd["주연 배우"].ToString(),
-                        rd["감독"].ToString(),
-                        rd["제작 및 배급"].ToString(),
-                        rd["출시일"].ToString()
+                        rd["video_code"].ToString(),
+                        rd["genre_name"].ToString(),
+                        rd["title"].ToString(),
+                        rd["actor_name"].ToString(),
+                        rd["director_name"].ToString(),
+                        rd["company_name"].ToString(),
+                        rd["release_date"].ToString()
                     );
                 }
             }
             catch (Exception ex) 
             {
-
+                MessageBox.Show(ex.ToString());
             }
             finally { con.Close(); }
         }
